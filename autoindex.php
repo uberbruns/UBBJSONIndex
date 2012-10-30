@@ -12,7 +12,7 @@ $list = array();
 $this_dir = dirname(__FILE__);
 $requested_dir = realpath($_SERVER['DOCUMENT_ROOT'] . '/' . $_SERVER['REQUEST_URI']);
 
-if (strlen($requested_dir) < strlen($this_dir) || !file_exists($requested_dir)) {
+if (!$requested_dir || strlen($requested_dir) < strlen($this_dir) || !file_exists($requested_dir)) {
 	header("Status: 404 Not Found");
 	exit();
 }
