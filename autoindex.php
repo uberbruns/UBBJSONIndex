@@ -24,13 +24,17 @@ foreach (glob($requested_dir . '/*') as $file) {
 	$mime_type = finfo_file($file_info_resource, $file);
 	$stats = stat($file);
 
-	$list[] = array(
-		"uri" => substr($file, strlen($_SERVER['DOCUMENT_ROOT'])),
-		"mime" => $mime_type,
-		"mtime" => $stats["mtime"],
-		"ctime" => $stats["ctime"],
-		"size"  => $stats["size"],
-	);
+	if ($mime_type != "text/x-php") {
+
+		$list[] = array(
+			"uri" => substr($file, strlen($_SERVER['DOCUMENT_ROOT'])),
+			"mime" => $mime_type,
+			"mtime" => $stats["mtime"],
+			"ctime" => $stats["ctime"],
+			"size"  => $stats["size"],
+		);
+
+	}
 
 }
  
