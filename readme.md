@@ -11,6 +11,6 @@ RewriteRule ^(.*)$ autoindex.php [QSA,L]
 
 ## Response
 ```javascript
-[{"uri":"\/Users\/kb\/Development\/Repositories\/UBBJSONIndex\/test\/file-a.txt","mime":"text\/plain","mtime":1351607764,"ctime":1351607764,"size":2},
-{"uri":"\/Users\/kb\/Development\/Repositories\/UBBJSONIndex\/test\/file-b.html","mime":"text\/html","mtime":1351607784,"ctime":1351607784,"size":70}]
+[{"uri":"\/UBBJSONIndex\/test\/file-a.txt","mime":"text\/plain","mtime":1351607764,"ctime":1351607764,"size":2},
+{"uri":"\/UBBJSONIndex\/test\/file-b.html","mime":"text\/html","mtime":1351607784,"ctime":1351607784,"size":70}]
 ```
